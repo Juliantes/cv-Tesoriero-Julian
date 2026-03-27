@@ -1,210 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Curriculum Vitae - [Tu Nombre]</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            color: #222;
-        }
-        .cv-container {
-            max-width: 900px;
-            background: #fff;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.12);
-        }
-        .header {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            border-bottom: 2px solid #0077cc;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        .photo {
-            flex: 0 0 120px;
-            width: 120px;
-            height: 120px;
-            background: #ededed;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 30px;
-        }
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .info {
-            flex: 1;
-        }
-        .info h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2em;
-            color: #0077cc;
-        }
-        .info p {
-            margin: 4px 0;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        section h2 {
-            color: #0077cc;
-            margin-bottom: 10px;
-            border-left: 4px solid #0077cc;
-            padding-left: 12px;
-        }
-        ul, ol {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .skills-list span {
-            background: #e0f2ff;
-            color: #0077cc;
-            border-radius: 12px;
-            padding: 5px 14px;
-            margin: 5px 8px 5px 0;
-            font-size: 1em;
-            transition: background 0.2s;
-        }
-        .skills-list span:hover {
-            background: #bde6fd;
-        }
-        .contact-links a {
-            color: #0077cc;
-            text-decoration: none;
-            margin-right: 15px;
-            transition: text-decoration 0.2s;
-        }
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
-        @media(max-width:600px){
-            .cv-container { padding: 12px; }
-            .header { flex-direction: column; align-items: flex-start; }
-            .photo { margin: 0 0 14px 0; }
-        }
-        .btn-descargar {
-            display:inline-block;
-            background: #0077cc;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            padding: 10px 24px;
-            font-size: 1.1em;
-            margin-top: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.2s, box-shadow 0.2s;
-        }
-        .btn-descargar:hover {
-            background: #005fa3;
-            box-shadow: 0 2px 8px rgba(0,119,204,0.13);
-        }
-    </style>
-</head>
-<body>
-    <div class="cv-container">
-        <div class="header">
-            <div class="photo">
-                <!-- Puedes reemplazar la imagen por tu foto -->
-                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto de [Tu Nombre]">
-            </div>
-            <div class="info">
-                <h1>[Tu Nombre Completo]</h1>
-                <p><b>Carrera:</b> Tecnicatura Universitaria en Programación</p>
-                <p><b>Ciudad:</b> [Tu Ciudad, Provincia]</p>
-                <div class="contact-links">
-                    <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a>
-                    <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
-                    <a href="tel:+541100000000">+54 11 0000-0000</a>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Desarrollador</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="cv" id="cvRoot">
+      <header class="hero">
+        <div class="hero__left">
+          <div class="avatar" aria-hidden="true">
+            <span class="avatar__initials" id="initials">AP</span>
+          </div>
+          <div class="hero__meta">
+            <h1 class="hero__name" id="fullName">—</h1>
+            <p class="hero__role" id="role">—</p>
+            <p class="hero__tagline" id="tagline">—</p>
+            <div class="chips" id="topChips"></div>
+          </div>
         </div>
 
-        <section>
-            <h2>Perfil Profesional</h2>
-            <p>
-                Soy estudiante de programación con sólidos fundamentos en desarrollo web y orientado a la resolución de problemas. Interesado/a en seguir aprendiendo y aplicar mis conocimientos en proyectos reales. Me destaco por el trabajo en equipo, responsabilidad y ganas de superarme.
-            </p>
+        <div class="hero__right">
+          <div class="actions">
+            <button id="downloadPdfBtn" class="btn" type="button">Descargar PDF</button>
+            <a id="githubBtn" class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+
+          <div class="contact" id="contact"></div>
+        </div>
+      </header>
+
+      <section class="grid">
+        <section class="card">
+          <div class="card__head">
+            <h2 class="card__title">Sobre mí</h2>
+          </div>
+          <p class="card__text" id="about">—</p>
         </section>
 
-        <section>
-            <h2>Experiencia Académica</h2>
-            <ul>
-                <li>
-                    <b>Tecnicatura Universitaria en Programación - [Facultad o Instituto]</b><br>
-                    [Fecha de inicio] - Actualidad
-                </li>
-                <!-- Puedes agregar más items si tienes otra formación relevante -->
-            </ul>
+        <section class="card">
+          <div class="card__head">
+            <h2 class="card__title">Skills</h2>
+            <span class="badge" id="yearsBadge">—</span>
+          </div>
+          <div class="skills" id="skills"></div>
         </section>
+      </section>
 
-        <section>
-            <h2>Experiencia Laboral</h2>
-            <ul>
-                <li>
-                    <b>Puesto simulado / Proyecto freelance (opcional)</b> — [Nombre de la empresa o proyecto]
-                    <br>
-                    [Fecha] <br>
-                    Breve descripción de las tareas realizadas o responsabilidades (opcional si aún no has trabajado).
-                </li>
-            </ul>
-        </section>
+      <section class="card">
+        <div class="card__head">
+          <h2 class="card__title">Experiencia</h2>
+          <span class="muted" id="location">—</span>
+        </div>
+        <div class="timeline" id="experience"></div>
+      </section>
 
-        <section>
-            <h2>Habilidades Técnicas</h2>
-            <div class="skills-list">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>Git / GitHub</span>
-                <span>Programación Orientada a Objetos</span>
-                <span>SQL básico</span>
-                <!-- Puedes agregar más habilidades -->
-            </div>
-        </section>
+      <section class="card">
+        <div class="card__head">
+          <h2 class="card__title">Proyectos</h2>
+          <span class="muted">Repositorios / demos</span>
+        </div>
+        <div class="projects" id="projects"></div>
+      </section>
 
-        <section>
-            <h2>Idiomas</h2>
-            <ul>
-                <li>Español - Nativo</li>
-                <li>Inglés - Intermedio</li>
-            </ul>
-        </section>
+      <footer class="footer">
+        <span class="muted">Generado con HTML + CSS + JS (sin frameworks).</span>
+        <span class="muted" id="updatedAt"></span>
+      </footer>
+    </main>
 
-        <section>
-            <h2>Intereses</h2>
-            <ul>
-                <li>Desarrollo web</li>
-                <li>Inteligencia Artificial</li>
-                <li>Videojuegos</li>
-                <li>Resolución de problemas</li>
-            </ul>
-        </section>
-        
-        <a href="#" onclick="descargarCV()" class="btn-descargar">Descargar CV (PDF)</a>
-    </div>
-
-    <script>
-        // Descarga el CV como PDF usando la función de imprimir del navegador
-        function descargarCV() {
-            window.print();
-        }
-    </script>
-</body>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
-
