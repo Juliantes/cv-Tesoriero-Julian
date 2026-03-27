@@ -1,20 +1,22 @@
-# Proyecto JS (base)
+# Mi CV (página web)
 
-## Cómo correrlo
+Hola, esto es un CV hecho como una página web simple, sin frameworks. Lo armé para practicar HTML, CSS y un poco de JavaScript.
 
-- Abrí `index.html` con doble click.
-- Si tu navegador bloquea `type="module"` por abrir desde archivo (a veces pasa), corré un servidor local:
+## Qué hace
 
-```bash
-cd "C:\Users\Usuario\Desktop\js-proyecto"
-python -m http.server 5173
-```
+Es una sola página donde muestro datos de ejemplo (nombre, experiencia, skills, proyectos, etc.). Los textos se cargan desde `main.js` en un objeto llamado `CV`, así que si querés cambiar algo editás ahí.
 
-Luego abrí `http://localhost:5173`.
+## Cómo verlo
+
+1. Descargá o cloná el repo.
+2. Abrí `index.html` con el navegador (doble click suele alcanzar).
 
 ## Archivos
 
-- `index.html`: UI
-- `styles.css`: estilos
-- `main.js`: lógica de la app (estado + eventos)
+- `index.html` — estructura de la página  
+- `styles.css` — estilos y modo impresión (para PDF)  
+- `main.js` — datos del CV y armado de la vista  
 
+## Notas
+
+Soy estudiante y esto es un proyecto personal para aprender.
