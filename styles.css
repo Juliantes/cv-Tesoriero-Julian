@@ -23,7 +23,7 @@
     radial-gradient(900px 900px at 55% 110%, rgba(16,185,129,.12), transparent 55%),
     var(--bg);
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
 }
 .page-body,
 .page-body *,
@@ -410,6 +410,12 @@
   gap: 10px;
   flex-wrap: wrap;
   padding: 0 2px;
+}
+
+.back-top{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 860px) {

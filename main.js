@@ -237,6 +237,14 @@ function wireAvatarFallback() {
   });
 }
 
+function wireBackToTop() {
+  const btn = document.getElementById("backToTopBtn");
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
 function wireContactForm() {
   const form = document.getElementById("contactForm");
   const feedback = document.getElementById("formFeedback");
@@ -258,4 +266,5 @@ function wireContactForm() {
 render();
 wireAvatarFallback();
 wirePdfButton();
+wireBackToTop();
 wireContactForm();
