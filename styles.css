@@ -11,10 +11,12 @@
   --shadow: 0 18px 60px rgba(0,0,0,.55);
 }
 
-*{ box-sizing: border-box; }
-html, body{ height: 100%; }
-body{
+.page-root{
+  height: 100%;
+}
+.page-body{
   margin: 0;
+  min-height: 100%;
   background:
     radial-gradient(1200px 900px at 20% 10%, rgba(110,231,255,.20), transparent 55%),
     radial-gradient(900px 800px at 90% 30%, rgba(124,58,237,.16), transparent 60%),
@@ -22,6 +24,12 @@ body{
     var(--bg);
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.page-body,
+.page-body *,
+.page-body *::before,
+.page-body *::after{
+  box-sizing: border-box;
 }
 
 .cv{
@@ -136,6 +144,12 @@ body{
   font-weight: 850;
   letter-spacing: .5px;
   color: rgba(255,255,255,.92);
+}
+.avatar__photo--broken{
+  display: none;
+}
+.avatar__initials--fallback{
+  display: inline;
 }
 
 .hero__name{
@@ -348,6 +362,47 @@ body{
   font-size: 12px;
 }
 
+.form{
+  display: grid;
+  gap: 12px;
+  margin-top: 4px;
+}
+.form__row{
+  display: grid;
+  gap: 6px;
+}
+.form__label{
+  font-size: 13px;
+  font-weight: 650;
+  color: rgba(255,255,255,.86);
+}
+.form__input{
+  appearance: none;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.20);
+  color: var(--text);
+  font: inherit;
+}
+.form__input::placeholder{ color: rgba(255,255,255,.35); }
+.form__input:focus{
+  outline: 2px solid rgba(110,231,255,.40);
+  outline-offset: 2px;
+  border-color: rgba(110,231,255,.35);
+}
+.form__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+.form__feedback{
+  margin: 0;
+  font-size: 13px;
+}
+
 .footer{
   margin-top: 16px;
   display: flex;
@@ -367,11 +422,11 @@ body{
 /* Impresión (PDF) */
 @media print{
   :root{ --bg: #ffffff; --text: #111827; --muted: #4b5563; --border: rgba(17,24,39,.14); }
-  body{
+  .page-body{
     background: #ffffff !important;
     color: #111827 !important;
   }
-  .btn, .actions{ display: none !important; }
+  .btn, .actions, .no-print{ display: none !important; }
   .card, .hero, .contact__item, .skill, .job, .project{
     box-shadow: none !important;
     backdrop-filter: none !important;
@@ -393,7 +448,11 @@ body{
     border-color: rgba(17,24,39,.14) !important;
     color: #111827 !important;
   }
-  a{ color: #111827 !important; text-decoration: none !important; }
+  .contact__item,
+  .miniLink{
+    color: #111827 !important;
+    text-decoration: none !important;
+  }
   .cv{ padding: 0 !important; }
   @page{ margin: 14mm; }
 }

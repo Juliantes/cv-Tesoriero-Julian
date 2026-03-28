@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="page-root">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV | Desarrollador</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-body">
     <main class="cv" id="cvRoot">
       <header class="hero">
         <div class="hero__left">
@@ -15,7 +15,6 @@
               class="avatar__photo"
               src="https://i.pravatar.cc/300?img=12"
               alt="Foto de perfil"
-              onerror="this.style.display='none';document.getElementById('initials').style.display='inline';"
             />
             <span class="avatar__initials" id="initials">AP</span>
           </div>
@@ -68,6 +67,45 @@
           <span class="muted">Repositorios / demos</span>
         </div>
         <div class="projects" id="projects"></div>
+      </section>
+
+      <section class="card no-print" aria-labelledby="contactFormTitle">
+        <div class="card__head">
+          <h2 class="card__title" id="contactFormTitle">Contacto</h2>
+          <span class="muted">Formulario de ejemplo</span>
+        </div>
+        <form id="contactForm" class="form" action="#" method="post">
+          <div class="form__row">
+            <label class="form__label" for="nombre">Nombre</label>
+            <input
+              class="form__input"
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="email">Email</label>
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="mensaje">Mensaje</label>
+            <input class="form__input" type="text" id="mensaje" name="mensaje" required />
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+          <p class="form__feedback muted" id="formFeedback" hidden></p>
+        </form>
       </section>
 
       <footer class="footer">

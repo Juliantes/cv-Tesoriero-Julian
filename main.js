@@ -227,5 +227,35 @@ function wirePdfButton() {
   });
 }
 
+function wireAvatarFallback() {
+  const img = document.querySelector(".avatar__photo");
+  const initials = document.getElementById("initials");
+  if (!img || !initials) return;
+  img.addEventListener("error", () => {
+    img.classList.add("avatar__photo--broken");
+    initials.classList.add("avatar__initials--fallback");
+  });
+}
+
+function wireContactForm() {
+  const form = document.getElementById("contactForm");
+  const feedback = document.getElementById("formFeedback");
+  if (!form || !feedback) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    feedback.hidden = false;
+    feedback.textContent =
+      "Listo: es solo una demostración; no se envía ningún correo ni se guarda en servidor.";
+    form.reset();
+  });
+}
+
 render();
+wireAvatarFallback();
 wirePdfButton();
+wireContactForm();
