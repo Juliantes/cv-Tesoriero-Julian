@@ -20,3 +20,6 @@ Es una sola página donde muestro datos de ejemplo (nombre, experiencia, skills,
 ## Notas
 
 Soy estudiante y esto es un proyecto personal para aprender.
+
+
+https://juliantes.github.io/cv-Tesoriero-Julian/
