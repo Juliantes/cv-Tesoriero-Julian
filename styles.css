@@ -8,7 +8,8 @@
   --accent: #6ee7ff;
   --accent2: #a78bfa;
   --good: #34d399;
-  --shadow: 0 1.125em 3.75em rgba(0,0,0,.55);
+  /* Espaciado / profundidad global → rem */
+  --shadow: 0 1.125rem 3.75rem rgba(0,0,0,.55);
 }
 
 .page-root{
@@ -34,18 +35,19 @@
   box-sizing: border-box;
 }
 
+/* Ancho de layout → % */
 .cv{
   width: 90%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 2.5em 0 3.75em;
+  padding: 2.5rem 0 3.75rem;
 }
 
 .muted{ color: var(--muted); }
 
 .card{
-  margin-top: 0.875em;
-  padding: 1em 1em 1.125em;
+  margin-top: 0.875rem;
+  padding: 1rem 1rem 1.125rem;
   border: 0.0625em solid var(--border);
   border-radius: 1.125em;
   background: rgba(255,255,255,.05);
@@ -57,8 +59,8 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.75em;
-  margin-bottom: 0.625em;
+  gap: 0.75rem;
+  margin-bottom: 0.625rem;
 }
 
 .card__title{
@@ -68,7 +70,7 @@
 }
 
 .card__text{
-  margin: 0 0 0.75em 0;
+  margin: 0 0 0.75rem 0;
   color: var(--muted);
 }
 
@@ -77,19 +79,19 @@
   border: 0.0625em solid rgba(255,255,255,.16);
   background: linear-gradient(180deg, rgba(110,231,255,.22), rgba(110,231,255,.08));
   color: var(--text);
-  padding: 0.625em 0.875em;
+  padding: 0.625rem 0.875rem;
   border-radius: 0.875em;
   cursor: pointer;
   font-weight: 650;
-  letter-spacing: 0.0125em;
+  letter-spacing: 0.0125rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 .btn:hover{ border-color: rgba(110,231,255,.45); }
-.btn:active{ transform: translateY(0.0625em); }
+.btn:active{ transform: translateY(0.0625rem); }
 .btn:focus-visible{
   outline: 0.125em solid rgba(110,231,255,.45);
   outline-offset: 0.125em;
@@ -107,18 +109,19 @@
     radial-gradient(ellipse 85% 38% at 95% 40%, rgba(167,139,250,.16), transparent 65%),
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
   box-shadow: var(--shadow);
-  padding: 1.125em;
+  padding: 1.125rem;
   display: grid;
   grid-template-columns: 58% minmax(0, 1fr);
-  gap: 0.875em;
+  gap: 0.875rem;
 }
 
 .hero__left{
   display: flex;
-  gap: 0.875em;
+  gap: 0.875rem;
   align-items: center;
 }
 
+/* Bloque visual del avatar → em */
 .avatar{
   position: relative;
   overflow: hidden;
@@ -131,7 +134,7 @@
     linear-gradient(180deg, rgba(110,231,255,.22), rgba(110,231,255,.06));
   display: grid;
   place-items: center;
-  box-shadow: 0 1em 3.125em rgba(0,0,0,.35);
+  box-shadow: 0 1rem 3.125rem rgba(0,0,0,.35);
 }
 .avatar__photo{
   position: absolute;
@@ -145,7 +148,7 @@
   position: relative;
   z-index: 1;
   font-weight: 850;
-  letter-spacing: 0.03125em;
+  letter-spacing: 0.03125rem;
   color: rgba(255,255,255,.92);
 }
 .avatar__photo--broken{
@@ -157,15 +160,15 @@
 
 .hero__name{
   margin: 0;
-  letter-spacing: 0.0125em;
+  letter-spacing: 0.0125rem;
 }
 .hero__role{
-  margin: 0.25em 0 0 0;
+  margin: 0.25rem 0 0 0;
   color: rgba(255,255,255,.84);
   font-weight: 650;
 }
 .hero__tagline{
-  margin: 0.375em 0 0 0;
+  margin: 0.375rem 0 0 0;
   color: var(--muted);
   line-height: 1.35;
 }
@@ -173,13 +176,13 @@
 .hero__right{
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
+  gap: 0.75rem;
   align-items: stretch;
 }
 
 .actions{
   display: flex;
-  gap: 0.625em;
+  gap: 0.625rem;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
@@ -187,13 +190,13 @@
 .chips{
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
-  margin-top: 0.625em;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
 }
 .chip{
   border: 0.0625em solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.04);
-  padding: 0.375em 0.625em;
+  padding: 0.375rem 0.625rem;
   border-radius: 10em;
   color: rgba(255,255,255,.84);
   font-size: 0.75rem;
@@ -203,7 +206,7 @@
   border: 0.0625em solid rgba(52,211,153,.30);
   background: rgba(52,211,153,.10);
   color: rgba(255,255,255,.88);
-  padding: 0.3125em 0.625em;
+  padding: 0.3125rem 0.625rem;
   border-radius: 10em;
   font-size: 0.75rem;
   white-space: nowrap;
@@ -211,13 +214,13 @@
 
 .contact{
   display: grid;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 .contact__item{
   display: flex;
   align-items: center;
-  gap: 0.625em;
-  padding: 0.625em 0.75em;
+  gap: 0.625rem;
+  padding: 0.625rem 0.75rem;
   border-radius: 1em;
   border: 0.0625em solid rgba(255,255,255,.12);
   background: rgba(0,0,0,.14);
@@ -246,19 +249,19 @@
 .grid{
   display: grid;
   grid-template-columns: 52% minmax(0, 1fr);
-  gap: 0.875em;
-  margin-top: 0.875em;
+  gap: 0.875rem;
+  margin-top: 0.875rem;
 }
 
 .skills{
   display: grid;
-  gap: 0.625em;
+  gap: 0.625rem;
 }
 .skill{
   display: flex;
-  gap: 0.75em;
+  gap: 0.75rem;
   align-items: center;
-  padding: 0.75em;
+  padding: 0.75rem;
   border-radius: 1em;
   border: 0.0625em solid rgba(255,255,255,.12);
   background: rgba(0,0,0,.14);
@@ -278,15 +281,15 @@
 .skill__detail{
   color: var(--muted);
   font-size: 0.8125rem;
-  margin-top: 0.125em;
+  margin-top: 0.125rem;
 }
 
 .timeline{
   display: grid;
-  gap: 0.875em;
+  gap: 0.875rem;
 }
 .job{
-  padding: 0.875em;
+  padding: 0.875rem;
   border-radius: 1.125em;
   border: 0.0625em solid rgba(255,255,255,.12);
   background: rgba(0,0,0,.14);
@@ -295,29 +298,29 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.75em;
+  gap: 0.75rem;
 }
 .job__title{ font-weight: 800; }
-.job__company{ color: rgba(255,255,255,.78); margin-top: 0.125em; }
+.job__company{ color: rgba(255,255,255,.78); margin-top: 0.125rem; }
 .job__period{ color: var(--muted); white-space: nowrap; }
 .job__bullets{
-  margin: 0.625em 0 0.625em 1.125em;
+  margin: 0.625rem 0 0.625rem 1.125rem;
   color: rgba(255,255,255,.82);
   line-height: 1.35;
 }
 .job__stack{
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 
 .projects{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75em;
+  gap: 0.75rem;
 }
 .project{
-  padding: 0.875em;
+  padding: 0.875rem;
   border-radius: 1.125em;
   border: 0.0625em solid rgba(255,255,255,.12);
   background: rgba(0,0,0,.14);
@@ -326,19 +329,19 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.75em;
+  gap: 0.75rem;
 }
 .project__name{ font-weight: 850; }
-.project__links{ display: flex; gap: 0.625em; flex-wrap: wrap; justify-content: flex-end; }
+.project__links{ display: flex; gap: 0.625rem; flex-wrap: wrap; justify-content: flex-end; }
 .miniLink{
   display: inline-flex;
   align-items: center;
-  gap: 0.375em;
+  gap: 0.375rem;
   text-decoration: none;
   color: rgba(255,255,255,.86);
   border: 0.0625em solid rgba(255,255,255,.12);
   background: rgba(255,255,255,.03);
-  padding: 0.375em 0.625em;
+  padding: 0.375rem 0.625rem;
   border-radius: 10em;
   font-size: 0.75rem;
 }
@@ -346,20 +349,20 @@
 .miniLink.is-disabled{ opacity: .65; cursor: not-allowed; }
 .project__desc{
   color: rgba(255,255,255,.80);
-  margin-top: 0.625em;
+  margin-top: 0.625rem;
   line-height: 1.35;
 }
 .project__tags{
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
-  margin-top: 0.625em;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
 }
 
 .pill{
   border: 0.0625em solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.04);
-  padding: 0.375em 0.625em;
+  padding: 0.375rem 0.625rem;
   border-radius: 10em;
   color: rgba(255,255,255,.82);
   font-size: 0.75rem;
@@ -367,12 +370,12 @@
 
 .form{
   display: grid;
-  gap: 0.75em;
-  margin-top: 0.25em;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
 }
 .form__row{
   display: grid;
-  gap: 0.375em;
+  gap: 0.375rem;
 }
 .form__label{
   font-size: 0.8125rem;
@@ -382,7 +385,7 @@
 .form__input{
   appearance: none;
   width: 100%;
-  padding: 0.625em 0.75em;
+  padding: 0.625rem 0.75rem;
   border-radius: 0.875em;
   border: 0.0625em solid rgba(255,255,255,.14);
   background: rgba(0,0,0,.20);
@@ -398,8 +401,8 @@
 .form__actions{
   display: flex;
   flex-wrap: wrap;
-  gap: 0.625em;
-  margin-top: 0.25em;
+  gap: 0.625rem;
+  margin-top: 0.25rem;
 }
 .form__feedback{
   margin: 0;
@@ -407,21 +410,21 @@
 }
 
 .footer{
-  margin-top: 1em;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
-  gap: 0.625em;
+  gap: 0.625rem;
   flex-wrap: wrap;
-  padding: 0 0.125em;
+  padding: 0 0.125rem;
 }
 
 .back-top{
-  margin-top: 1.25em;
+  margin-top: 1.25rem;
   display: flex;
   justify-content: center;
 }
 
-@media (max-width: 53.75em) {
+@media (max-width: 53.75rem) {
   .hero{ grid-template-columns: 1fr; }
   .actions{ justify-content: flex-start; }
   .grid{ grid-template-columns: 1fr; }
