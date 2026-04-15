@@ -11,7 +11,7 @@
   --shadow: 0 1.125em 3.75em rgba(0,0,0,.55);
 }
 
-page-root{
+.page-root{
   height: 100%;
 }
 .page-body{
@@ -425,7 +425,7 @@ page-root{
   .projects{ grid-template-columns: 1fr; }
 }
 
-/* ImpresiÃ³n (PDF) */
+/* Impresión (PDF) */
 @media print{
   :root{ --bg: #ffffff; --text: #111827; --muted: #4b5563; --border: rgba(17,24,39,.14); }
   .page-body{
