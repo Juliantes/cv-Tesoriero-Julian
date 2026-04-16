@@ -1,15 +1,14 @@
 :root{
-  --bg: #0b0d12;
-  --panel: rgba(255,255,255,.06);
-  --panel2: rgba(255,255,255,.10);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.70);
-  --border: rgba(255,255,255,.12);
-  --accent: #6ee7ff;
-  --accent2: #a78bfa;
-  --good: #34d399;
-  /* Espaciado / profundidad global → rem */
-  --shadow: 0 1.125rem 3.75rem rgba(0,0,0,.55);
+  --bg-color: #0b0d12;
+  --panel-color: rgba(255,255,255,.06);
+  --panel2-color: rgba(255,255,255,.10);
+  --text-color: rgba(255,255,255,.92);
+  --muted-color: rgba(255,255,255,.70);
+  --border-color: rgba(255,255,255,.12);
+  --accent-color: #6ee7ff;
+  --accent2-color: #a78bfa;
+  --good-color: #34d399;
+  --shadow: 0 1.125em 3.75em rgba(0,0,0,.55);
 }
 
 .page-root{
@@ -22,8 +21,8 @@
     radial-gradient(1200px 900px at 20% 10%, rgba(110,231,255,.20), transparent 55%),
     radial-gradient(900px 800px at 90% 30%, rgba(124,58,237,.16), transparent 60%),
     radial-gradient(900px 900px at 55% 110%, rgba(16,185,129,.12), transparent 55%),
-    var(--bg);
-  color: var(--text);
+    var(--bg-color);
+  color: var(--text-color);
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
 }
 .page-body,
@@ -40,12 +39,12 @@
   padding: 2.5rem 0 3.75rem;
 }
 
-.muted{ color: var(--muted); }
+.muted{ color: var(--muted-color); }
 
 .card{
   margin-top: 0.875rem;
   padding: 1rem 1rem 1.125rem;
-  border: 0.0625em solid var(--border);
+  border: 0.0625em solid var(--border-color);
   border-radius: 1.125em;
   background: rgba(255,255,255,.05);
   box-shadow: var(--shadow);
@@ -68,14 +67,14 @@
 
 .card__text{
   margin: 0 0 0.75rem 0;
-  color: var(--muted);
+  color: var(--muted-color);
 }
 
 .btn{
   appearance: none;
   border: 1px solid rgba(255,255,255,.16);
   background: linear-gradient(180deg, rgba(110,231,255,.22), rgba(110,231,255,.08));
-  color: var(--text);
+  color: var(--text-color);
   padding: 0.625rem 0.875rem;
   border-radius: 0.875em;
   cursor: pointer;
@@ -99,7 +98,7 @@
 }
 
 .hero{
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 22px;
   background:
     radial-gradient(700px 260px at 20% 0%, rgba(110,231,255,.18), transparent 60%),
@@ -166,7 +165,7 @@
 }
 .hero__tagline{
   margin: 0.375rem 0 0 0;
-  color: var(--muted);
+  color: var(--muted-color);
   line-height: 1.35;
 }
 
@@ -276,7 +275,7 @@
   font-weight: 750;
 }
 .skill__detail{
-  color: var(--muted);
+  color: var(--muted-color);
   font-size: 0.8125rem;
   margin-top: 0.125rem;
 }
@@ -299,7 +298,7 @@
 }
 .job__title{ font-weight: 800; }
 .job__company{ color: rgba(255,255,255,.78); margin-top: 0.125rem; }
-.job__period{ color: var(--muted); white-space: nowrap; }
+.job__period{ color: var(--muted-color); white-space: nowrap; }
 .job__bullets{
   margin: 0.625rem 0 0.625rem 1.125rem;
   color: rgba(255,255,255,.82);
@@ -386,7 +385,7 @@
   border-radius: 0.875em;
   border: 0.0625em solid rgba(255,255,255,.14);
   background: rgba(0,0,0,.20);
-  color: var(--text);
+  color: var(--text-color);
   font: inherit;
 }
 .form__input::placeholder{ color: rgba(255,255,255,.35); }
@@ -430,7 +429,7 @@
 
 /* Impresión (PDF) */
 @media print{
-  :root{ --bg: #ffffff; --text: #111827; --muted: #4b5563; --border: rgba(17,24,39,.14); }
+  :root{ --bg-color: #ffffff; --text-color: #111827; --muted-color: #4b5563; --border-color: rgba(17,24,39,.14); }
   .page-body{
     background: #ffffff !important;
     color: #111827 !important;
